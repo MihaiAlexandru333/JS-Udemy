@@ -44,5 +44,5 @@
 
         const suit = suites[suiteIdx];
 
-        console.log(value, suit);
+        console.log(value, suit);//
     }
