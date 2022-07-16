@@ -28,21 +28,51 @@
     //       suit : 'clubs'
     //     }
 
-    function getCard() {
+    // function getCard() {
 
-        const values = ['2', '3','4','5','6','7','8','9','10','J','Q','K','A']
+    //     const values = ['2', '3','4','5','6','7','8','9','10','J','Q','K','A']
 
-        const valuesIdx =  Math.floor(Math.random() * values.length);  // return a random item from the 'values' array
+    //     const valuesIdx =  Math.floor(Math.random() * values.length);  // return a random item index from the 'values' array
 
-        //return idx; return the index of the item in the array
+    //     //return idx; return the index of the item in the array
 
-        const value = values[valuesIdx]; //returns the value of the index from the array
+    //     const value = values[valuesIdx]; //returns the value of the index from the array
 
-        const suites = ['clubs','hearts','spades','diamonds']
+    //     const suites = ['clubs','hearts','spades','diamonds']
 
-        const suiteIdx = Math.floor(Math.random() * suite.length);
+    //     const suiteIdx = Math.floor(Math.random() * suites.length);
 
-        const suit = suites[suiteIdx];
+    //     const suit = suites[suiteIdx];
 
-        console.log(value, suit);//
+    //    // console.log(value, suit);
+
+    //     return {value: value, suit: suit}
+
+    // }
+
+//rewrite the function without repeating code (REFACTOR)
+ 
+    function pick(arr) {   //function that picks a random element from an array
+        //return a random element from arr
+        const idx = Math.floor(Math.random() * arr.length);  
+
+        return arr[idx];// return the index of the arr
+
     }
+
+function getCard() {
+
+    const values = ['2', '3','4','5','6','7','8','9','10','J','Q','K','A']
+
+    const suits = ['clubs','hearts','spades','diamonds']
+
+    // const value = pick(values); //return a random element from values arrray
+
+    // const suite = pick(suits); // return a random element from suits array
+
+    return {value: pick(values), suit: pick(suits)};
+
+}
+
+
+ 
